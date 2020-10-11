@@ -19,8 +19,16 @@ let enemy = {
 
 let score = 0;
 
+// function setup() {
+//   createCanvas(400, 400); // Change 1: Canvas Size
+// }
+
+let img;
+function preload() {
+  img = loadImage('assets/tarmac.gif');
+}
 function setup() {
-  createCanvas(500, 500);
+  image(img, 0, 0);
 }
 
 function draw() {
@@ -64,7 +72,7 @@ function draw() {
   enemy.y -= enemy.vy * deltaTime;
 
   // ===== drawing
-  background(30);
+  background(image, [a])
 
   fill('blue');
   circle(player.x, player.y, 80);

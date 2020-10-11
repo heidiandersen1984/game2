@@ -23,12 +23,28 @@ let score = 0;
 //   createCanvas(400, 400); // Change 1: Canvas Size
 // }
 
+// let img;
+// function preload() {
+//   img = loadImage('assets/tarmac.gif');
+// }
+// function setup() {
+//   image(img, 0, 0);
+// }
+
 let img;
+let c;
 function preload() {
-  img = loadImage('assets/tarmac.gif');
+  // preload() runs once
+  img = loadImage('assets/laDefense.jpg');
 }
+
 function setup() {
-  image(img, 0, 0);
+  let img = createImage(400, 400); // same as new p5.Image(100, 100);
+  img.loadPixels();
+  // get color of middle pixel
+  c = img.get(img.width / 2, img.height / 2);
+  createCanvas(400, 400);
+  // background(0);
 }
 
 function draw() {
@@ -72,7 +88,7 @@ function draw() {
   enemy.y -= enemy.vy * deltaTime;
 
   // ===== drawing
-  background(img, [a])
+  background(img)
 
   fill('blue');
   circle(player.x, player.y, 80);

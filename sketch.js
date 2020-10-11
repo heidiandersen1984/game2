@@ -35,7 +35,7 @@ let img;
 let c;
 function preload() {
   // preload() runs once
-  img = loadImage('assets/laDefense.jpg');
+  img = loadImage('assets/tarmac.gif');
 }
 
 function setup() {

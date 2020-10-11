@@ -25,7 +25,7 @@ let score = 0;
 
 let img;
 function preload() {
-  img = loadImage('assets/tarmac.gif');
+  img = loadImage('https://github.com/heidiandersen1984/game2/blob/main/assets/tarmac.gif');
 }
 function setup() {
   image(img, 0, 0);

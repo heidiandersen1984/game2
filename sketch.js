@@ -1,5 +1,7 @@
 // Game State
 
+const { default: p5 } = require("./p5");
+
 let player = {
   x: 50,
   y: 50,
@@ -31,21 +33,23 @@ let score = 0;
 //   image(img, 0, 0);
 // }
 
-let img;
-let c;
-function preload() {
-  // preload() runs once
-  img = loadImage('assets/tarmac.gif');
-}
 
 function setup() {
   let img = createImage(400, 400); // same as new p5.Image(100, 100);
+  img = loadImage('assets/tarmac.gif');
   img.loadPixels();
   // get color of middle pixel
   c = img.get(img.width / 2, img.height / 2);
   createCanvas(400, 400);
   // background(0);
 }
+
+let img;
+let c;
+param {
+  p5.img Image
+}
+
 
 function draw() {
   // ==== updating state
